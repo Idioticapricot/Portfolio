@@ -13,672 +13,537 @@
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
   <!--
-    - custom css link
+    - tailwind css
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'violet-200': '#A8A6FF',
+            'violet-300': '#918efa',
+            'violet-400': '#807dfa',
+            'pink-200': '#FFA6F6',
+            'pink-300': '#fa8cef',
+            'pink-400': '#fa7fee',
+            'red-200': '#FF9F9F',
+            'red-300': '#fa7a7a',
+            'red-400': '#f76363',
+            'orange-200': '#FFC29F',
+            'orange-300': '#FF965B',
+            'orange-400': '#fa8543',
+            'yellow-200': '#FFF066',
+            'yellow-300': '#FFE500',
+            'yellow-400': '#FFE500',
+            'lime-200': '#B8FF9F',
+            'lime-300': '#9dfc7c',
+            'lime-400': '#7df752',
+            'cyan-200': '#A6FAFF',
+            'cyan-300': '#79F7FF',
+            'cyan-400': '#53f2fc'
+          }
+        }
+      }
+    }
+  </script>
 
   <!--
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    
+    /* Neo-brutalism patterns and effects */
+    .pattern-dots {
+      background-image: radial-gradient(circle, #000 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    
+    .pattern-grid {
+      background-image: linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .pulse-shadow {
+      animation: pulseShadow 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulseShadow {
+      0%, 100% { box-shadow: 4px 4px 0px rgba(0,0,0,1); }
+      50% { box-shadow: 8px 8px 0px rgba(0,0,0,1); }
+    }
+    
+    .skill-bar {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .skill-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      animation: shimmer 2s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    
+    .card-tilt {
+      transition: transform 0.3s ease;
+    }
+    
+    .card-tilt:hover {
+      transform: rotate(-2deg) scale(1.02);
+    }
+    
+    .zigzag-border {
+      position: relative;
+    }
+    
+    .zigzag-border::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: linear-gradient(45deg, transparent 33.33%, #000 33.33%, #000 66.66%, transparent 66.66%);
+      background-size: 12px 8px;
+    }
+  </style>
 </head>
 
-<body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="A.Karthikeya" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="A.Karthikeya">A.Karthikeya</h1>
-
-          <p class="title">Computer Science Student & Developer</p>
+<body class="bg-gradient-to-br from-yellow-100 via-pink-50 to-cyan-100 min-h-screen relative overflow-x-hidden">
+  <!-- Dynamic Background Elements -->
+  <div class="fixed inset-0 -z-10">
+    <!-- Animated shapes -->
+    <div class="absolute top-10 left-10 w-32 h-32 bg-pink-200 rounded-full opacity-30 animate-pulse"></div>
+    <div class="absolute top-1/4 right-20 w-24 h-24 bg-cyan-300 rotate-45 opacity-40 animate-bounce" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-1/4 left-1/3 w-20 h-20 bg-lime-300 rounded-full opacity-35 floating" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/2 right-1/4 w-16 h-16 bg-orange-300 rotate-12 opacity-30 animate-pulse" style="animation-delay: 0.5s;"></div>
+    <div class="absolute bottom-20 right-10 w-28 h-28 bg-violet-200 rounded-full opacity-25 floating" style="animation-delay: 1.5s;"></div>
+    
+    <!-- Grid pattern overlay -->
+    <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px); background-size: 50px 50px;"></div>
+    
+    <!-- Dot pattern overlay -->
+    <div class="absolute inset-0 opacity-3" style="background-image: radial-gradient(circle, #000 2px, transparent 2px); background-size: 30px 30px;"></div>
+  </div>
+  <div class="max-w-6xl mx-auto p-4 lg:p-8">
+    
+    <!-- Header/Profile Card -->
+    <div class="w-full border-black border-4 rounded-lg hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-yellow-200 via-yellow-300 to-orange-200 mb-8 transition-all duration-300 pattern-dots card-tilt floating">
+      <div class="p-8 relative">
+        <!-- Decorative elements -->
+        <div class="absolute top-4 right-4 w-8 h-8 bg-black rotate-45"></div>
+        <div class="absolute bottom-4 left-4 w-6 h-6 bg-pink-300 border-2 border-black rounded-full"></div>
+        
+        <div class="flex flex-col lg:flex-row items-center gap-6">
+          <div class="relative">
+            <img src="./assets/images/my-avatar.png" alt="A.Karthikeya" class="w-32 h-32 border-black border-4 rounded-lg object-cover pulse-shadow">
+            <div class="absolute -top-2 -right-2 w-6 h-6 bg-lime-300 border-2 border-black rounded-full animate-bounce"></div>
+          </div>
+          <div class="text-center lg:text-left">
+            <h1 class="text-4xl lg:text-6xl font-black mb-2 gradient-text">A.KARTHIKEYA</h1>
+            <p class="text-xl font-bold mb-4 bg-white px-4 py-2 border-2 border-black rounded-lg inline-block zigzag-border">Computer Science Student & Developer</p>
+            <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
+              <span class="bg-violet-300 text-black px-3 py-1 text-sm font-bold border-2 border-black rounded transform rotate-1 hover:rotate-0 transition-transform">AI/ML</span>
+              <span class="bg-cyan-300 text-black px-3 py-1 text-sm font-bold border-2 border-black rounded transform -rotate-1 hover:rotate-0 transition-transform">WEB DEV</span>
+              <span class="bg-pink-300 text-black px-3 py-1 text-sm font-bold border-2 border-black rounded transform rotate-1 hover:rotate-0 transition-transform">BLOCKCHAIN</span>
+            </div>
+          </div>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:akarthikeyasmail@gmail.com" class="contact-link">akarthikeyasmail@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+919110568758" class="contact-link">+91 9110568758</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="2006-04-04">April 4, 2006</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Hyderabad, Telangana, India</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm a Computer Science student who treats technology like a playground.
-          </p>
-
-          <p>
-            Whether it's teaching AI to read financial reports, minting creatures on the blockchain, or tracking motorcycles with full-stack apps, I love blending creativity with engineering.
-          </p>
-
-          <p>
-            My goal: build tools that feel futuristic, but solve today's problems.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What I'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="ai icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">AI/ML Development</h4>
-
-                <p class="service-item-text">
-                  Building intelligent systems with PyTorch, LangChain, and LLM APIs.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="web dev icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Full-Stack Web Development</h4>
-
-                <p class="service-item-text">
-                  Developing scalable applications using React, FastAPI, Node.js, and Supabase.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="blockchain icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Blockchain DApps</h4>
-
-                <p class="service-item-text">
-                  Smart contract development with Solidity, Web3.js, and IPFS.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="data icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Analysis</h4>
-
-                <p class="service-item-text">
-                  Data processing and visualization with Pandas, NumPy, and Matplotlib.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <div class="resume-actions" style="display: flex; justify-content: space-between; margin-bottom: 30px;">
-          <button class="form-btn" onclick="window.open('./assets/resume.pdf', '_blank')">
-            <ion-icon name="document-text-outline"></ion-icon>
-            <span>View PDF</span>
-          </button>
-          <a href="./assets/resume.pdf" download="A.Karthikeya_Resume.pdf" class="form-btn" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
-            <ion-icon name="download-outline"></ion-icon>
-            <span>Download PDF</span>
-          </a>
+        
+        <!-- Contact Info -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+          <div class="bg-gradient-to-br from-white to-cyan-100 border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
+            <p class="font-black text-sm mb-1 bg-cyan-200 px-2 py-1 rounded border border-black inline-block">📧 EMAIL</p>
+            <a href="mailto:akarthikeyasmail@gmail.com" class="text-sm break-all hover:underline font-medium">akarthikeyasmail@gmail.com</a>
+          </div>
+          <div class="bg-gradient-to-br from-white to-pink-100 border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
+            <p class="font-black text-sm mb-1 bg-pink-200 px-2 py-1 rounded border border-black inline-block">📱 PHONE</p>
+            <a href="tel:+919110568758" class="text-sm hover:underline font-medium">+91 9110568758</a>
+          </div>
+          <div class="bg-gradient-to-br from-white to-lime-100 border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
+            <p class="font-black text-sm mb-1 bg-lime-200 px-2 py-1 rounded border border-black inline-block">🎂 BIRTHDAY</p>
+            <p class="text-sm font-medium">April 4, 2006</p>
+          </div>
+          <div class="bg-gradient-to-br from-white to-orange-100 border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
+            <p class="font-black text-sm mb-1 bg-orange-200 px-2 py-1 rounded border border-black inline-block">📍 LOCATION</p>
+            <p class="text-sm font-medium">Hyderabad, India</p>
+          </div>
         </div>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">JNTU Hyderabad</h4>
-
-              <span>2023 — Present</span>
-
-              <p class="timeline-text">
-                B.Tech in Computer Science & Engineering | CGPA: 7.5/10
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data Analyst Intern - AICTE</h4>
-
-              <span>Nov 2024 — Jan 2025</span>
-
-              <p class="timeline-text">
-                Analyzed 50,000+ records using Pandas/NumPy, built data visualizations (heatmaps, bar charts) with Matplotlib/Seaborn, and automated Excel preprocessing (40% faster).
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="trophy-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Achievements</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">HackRX Hackathon Finalist</h4>
-
-              <span>2024</span>
-
-              <p class="timeline-text">
-                Top 30 out of 70,000+ participants for building a RAG-based document analysis system.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">React (Frontend)</h5>
-                <data value="85">85%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">FastAPI / Node.js</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">AI/ML (PyTorch, LangChain)</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Solidity / Web3</h5>
-                <data value="65">65%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="projects">
-
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>AI/ML</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web Development</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Blockchain</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>AI/ML</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web Development</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Blockchain</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="ai/ml">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="rag" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Intelligent Document Analysis (RAG)</h3>
-
-                <p class="project-category">AI/ML</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="rideon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Ride On</h3>
-
-                <p class="project-category">Web Development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="blockchain">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="bestiary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Bestiary (NFT Collectibles)</h3>
-
-                <p class="project-category">Blockchain</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
+      </div>
     </div>
 
-  </main>
+    <!-- Navigation -->
+    <div class="flex flex-wrap gap-4 mb-8 justify-center relative">
+      <!-- Decorative background -->
+      <div class="absolute inset-0 pattern-grid opacity-10 -z-10"></div>
+      
+      <button class="h-12 border-black border-3 px-6 bg-gradient-to-r from-cyan-200 to-cyan-300 hover:from-cyan-300 hover:to-cyan-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:bg-cyan-400 rounded-lg font-black transition-all duration-200 nav-btn active transform hover:scale-105 relative overflow-hidden" data-nav-link="about">
+        <span class="relative z-10">📚 ABOUT</span>
+      </button>
+      <button class="h-12 border-black border-3 px-6 bg-gradient-to-r from-pink-200 to-pink-300 hover:from-pink-300 hover:to-pink-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:bg-pink-400 rounded-lg font-black transition-all duration-200 nav-btn transform hover:scale-105 relative overflow-hidden" data-nav-link="resume">
+        <span class="relative z-10">📄 RESUME</span>
+      </button>
+      <button class="h-12 border-black border-3 px-6 bg-gradient-to-r from-lime-200 to-lime-300 hover:from-lime-300 hover:to-lime-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:bg-lime-400 rounded-lg font-black transition-all duration-200 nav-btn transform hover:scale-105 relative overflow-hidden" data-nav-link="projects">
+        <span class="relative z-10">🚀 PROJECTS</span>
+      </button>
+      <button class="h-12 border-black border-3 px-6 bg-gradient-to-r from-orange-200 to-orange-300 hover:from-orange-300 hover:to-orange-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:bg-orange-400 rounded-lg font-black transition-all duration-200 nav-btn transform hover:scale-105 relative overflow-hidden" data-nav-link="contact">
+        <span class="relative z-10">📬 CONTACT</span>
+      </button>
+    </div>
+
+    <!-- About Section -->
+    <div class="page-content" id="about">
+      <div class="w-full border-black border-4 rounded-lg hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white via-blue-50 to-purple-50 mb-8 transition-all duration-300 relative overflow-hidden backdrop-blur-sm bg-opacity-90">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-200 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
+        <div class="absolute bottom-0 left-0 w-24 h-24 bg-pink-200 rounded-full translate-y-12 -translate-x-12 opacity-50"></div>
+        
+        <div class="p-8 relative z-10">
+          <h2 class="text-3xl font-black mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent relative">
+            💻 ABOUT ME
+            <div class="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded"></div>
+          </h2>
+          <div class="space-y-4 text-lg relative">
+            <p class="bg-gradient-to-r from-cyan-100 to-blue-100 p-4 rounded-lg border-l-4 border-cyan-400 font-medium">I'm a Computer Science student who treats technology like a playground.</p>
+            <p class="bg-gradient-to-r from-pink-100 to-purple-100 p-4 rounded-lg border-l-4 border-pink-400 font-medium">Whether it's teaching AI to read financial reports, minting creatures on the blockchain, or tracking motorcycles with full-stack apps, I love blending creativity with engineering.</p>
+            <p class="bg-gradient-to-r from-yellow-100 to-orange-100 p-4 rounded-lg border-l-4 border-yellow-400 font-bold text-xl">🎯 My goal: build tools that feel futuristic, but solve today's problems.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-violet-200 via-violet-300 to-purple-200 transition-all duration-300 transform hover:-rotate-1 hover:scale-105 relative overflow-hidden">
+          <div class="absolute top-2 right-2 text-2xl">🤖</div>
+          <div class="p-6 relative z-10">
+            <h3 class="text-xl font-black mb-3 text-purple-900">AI/ML DEVELOPMENT</h3>
+            <p class="font-medium text-purple-800">Building intelligent systems with PyTorch, LangChain, and LLM APIs.</p>
+            <div class="mt-3 flex gap-2">
+              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">PyTorch</span>
+              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">LangChain</span>
+            </div>
+          </div>
+        </div>
+        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-cyan-200 via-cyan-300 to-blue-200 transition-all duration-300 transform hover:rotate-1 hover:scale-105 relative overflow-hidden">
+          <div class="absolute top-2 right-2 text-2xl">🌐</div>
+          <div class="p-6 relative z-10">
+            <h3 class="text-xl font-black mb-3 text-blue-900">FULL-STACK WEB DEV</h3>
+            <p class="font-medium text-blue-800">Developing scalable applications using React, FastAPI, Node.js, and Supabase.</p>
+            <div class="mt-3 flex gap-2">
+              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">React</span>
+              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">FastAPI</span>
+            </div>
+          </div>
+        </div>
+        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-pink-200 via-pink-300 to-rose-200 transition-all duration-300 transform hover:-rotate-1 hover:scale-105 relative overflow-hidden">
+          <div class="absolute top-2 right-2 text-2xl">⛓️</div>
+          <div class="p-6 relative z-10">
+            <h3 class="text-xl font-black mb-3 text-rose-900">BLOCKCHAIN DAPPS</h3>
+            <p class="font-medium text-rose-800">Smart contract development with Solidity, Web3.js, and IPFS.</p>
+            <div class="mt-3 flex gap-2">
+              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">Solidity</span>
+              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">Web3.js</span>
+            </div>
+          </div>
+        </div>
+        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-lime-200 via-lime-300 to-green-200 transition-all duration-300 transform hover:rotate-1 hover:scale-105 relative overflow-hidden">
+          <div class="absolute top-2 right-2 text-2xl">📈</div>
+          <div class="p-6 relative z-10">
+            <h3 class="text-xl font-black mb-3 text-green-900">DATA ANALYSIS</h3>
+            <p class="font-medium text-green-800">Data processing and visualization with Pandas, NumPy, and Matplotlib.</p>
+            <div class="mt-3 flex gap-2">
+              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">Pandas</span>
+              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">NumPy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume Section -->
+    <div class="page-content hidden" id="resume">
+      <div class="w-full border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white via-yellow-50 to-orange-50 mb-8 transition-all duration-200 backdrop-blur-sm bg-opacity-95">
+        <div class="p-8">
+          <h2 class="text-3xl font-black mb-6">RESUME</h2>
+          
+          <!-- PDF Buttons -->
+          <div class="flex flex-wrap gap-4 mb-8">
+            <button onclick="window.open('./assets/resume.pdf', '_blank')" class="h-12 border-black border-2 px-6 bg-cyan-200 hover:bg-cyan-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-cyan-400 rounded-md font-bold transition-all duration-200 flex items-center gap-2">
+              <span>📄</span> VIEW PDF
+            </button>
+            <a href="./assets/resume.pdf" download="A.Karthikeya_Resume.pdf" class="h-12 border-black border-2 px-6 bg-lime-200 hover:bg-lime-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-lime-400 rounded-md font-bold transition-all duration-200 flex items-center gap-2 no-underline text-black">
+              <span>⬇️</span> DOWNLOAD PDF
+            </a>
+          </div>
+
+          <!-- Education -->
+          <div class="mb-8">
+            <h3 class="text-2xl font-black mb-4 bg-yellow-200 inline-block px-4 py-2 border-black border-2">EDUCATION</h3>
+            <div class="bg-gray-50 border-black border-2 p-6 rounded">
+              <h4 class="text-xl font-bold">JNTU Hyderabad</h4>
+              <p class="font-bold text-sm mb-2">2023 — Present</p>
+              <p>B.Tech in Computer Science & Engineering | CGPA: 7.5/10</p>
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div class="mb-8">
+            <h3 class="text-2xl font-black mb-4 bg-pink-200 inline-block px-4 py-2 border-black border-2">EXPERIENCE</h3>
+            <div class="bg-gray-50 border-black border-2 p-6 rounded">
+              <h4 class="text-xl font-bold">Data Analyst Intern - AICTE</h4>
+              <p class="font-bold text-sm mb-2">Nov 2024 — Jan 2025</p>
+              <p>Analyzed 50,000+ records using Pandas/NumPy, built data visualizations (heatmaps, bar charts) with Matplotlib/Seaborn, and automated Excel preprocessing (40% faster).</p>
+            </div>
+          </div>
+
+          <!-- Achievements -->
+          <div class="mb-8">
+            <h3 class="text-2xl font-black mb-4 bg-orange-200 inline-block px-4 py-2 border-black border-2">ACHIEVEMENTS</h3>
+            <div class="bg-gray-50 border-black border-2 p-6 rounded">
+              <h4 class="text-xl font-bold">HackRX Hackathon Finalist</h4>
+              <p class="font-bold text-sm mb-2">2024</p>
+              <p>Top 30 out of 70,000+ participants for building a RAG-based document analysis system.</p>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="relative">
+            <h3 class="text-2xl font-black mb-6 bg-gradient-to-r from-cyan-200 to-blue-200 inline-block px-6 py-3 border-black border-3 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)] transform -rotate-1">
+              💪 MY SKILLS
+            </h3>
+            <div class="space-y-6 bg-gradient-to-br from-cyan-50 via-white to-blue-50 p-6 border-black border-3 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+              <div class="skill-item transform hover:scale-105 transition-transform duration-200">
+                <div class="flex justify-between mb-3">
+                  <span class="font-black text-lg flex items-center gap-2">🐍 Python</span>
+                  <span class="font-black text-lg bg-violet-200 px-3 py-1 border-2 border-black rounded-full">90%</span>
+                </div>
+                <div class="w-full border-black border-3 h-8 bg-white rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
+                  <div class="h-full bg-gradient-to-r from-violet-200 to-violet-400 flex items-center justify-end pr-2 font-bold text-sm" style="width: 90%">
+                    90%
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item transform hover:scale-105 transition-transform duration-200">
+                <div class="flex justify-between mb-3">
+                  <span class="font-black text-lg flex items-center gap-2">⚛️ React</span>
+                  <span class="font-black text-lg bg-cyan-200 px-3 py-1 border-2 border-black rounded-full">85%</span>
+                </div>
+                <div class="w-full border-black border-3 h-8 bg-white rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
+                  <div class="h-full bg-gradient-to-r from-cyan-200 to-cyan-400 flex items-center justify-end pr-2 font-bold text-sm" style="width: 85%">
+                    85%
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item transform hover:scale-105 transition-transform duration-200">
+                <div class="flex justify-between mb-3">
+                  <span class="font-black text-lg flex items-center gap-2">🚀 FastAPI / Node.js</span>
+                  <span class="font-black text-lg bg-pink-200 px-3 py-1 border-2 border-black rounded-full">80%</span>
+                </div>
+                <div class="w-full border-black border-3 h-8 bg-white rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
+                  <div class="h-full bg-gradient-to-r from-pink-200 to-pink-400 flex items-center justify-end pr-2 font-bold text-sm" style="width: 80%">
+                    80%
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item transform hover:scale-105 transition-transform duration-200">
+                <div class="flex justify-between mb-3">
+                  <span class="font-black text-lg flex items-center gap-2">🤖 AI/ML</span>
+                  <span class="font-black text-lg bg-lime-200 px-3 py-1 border-2 border-black rounded-full">75%</span>
+                </div>
+                <div class="w-full border-black border-3 h-8 bg-white rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
+                  <div class="h-full bg-gradient-to-r from-lime-200 to-lime-400 flex items-center justify-end pr-2 font-bold text-sm" style="width: 75%">
+                    75%
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item transform hover:scale-105 transition-transform duration-200">
+                <div class="flex justify-between mb-3">
+                  <span class="font-black text-lg flex items-center gap-2">⛓️ Solidity / Web3</span>
+                  <span class="font-black text-lg bg-orange-200 px-3 py-1 border-2 border-black rounded-full">65%</span>
+                </div>
+                <div class="w-full border-black border-3 h-8 bg-white rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
+                  <div class="h-full bg-gradient-to-r from-orange-200 to-orange-400 flex items-center justify-end pr-2 font-bold text-sm" style="width: 65%">
+                    65%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="page-content hidden" id="projects">
+      <div class="w-full border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white via-green-50 to-lime-50 mb-8 transition-all duration-200 backdrop-blur-sm bg-opacity-95">
+        <div class="p-8">
+          <h2 class="text-3xl font-black mb-6">PROJECTS</h2>
+          
+          <!-- Filter Buttons -->
+          <div class="flex flex-wrap gap-4 mb-8">
+            <button class="filter-btn active h-10 border-black border-2 px-4 bg-yellow-200 hover:bg-yellow-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] rounded font-bold transition-all duration-200" data-filter="all">ALL</button>
+            <button class="filter-btn h-10 border-black border-2 px-4 bg-violet-200 hover:bg-violet-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] rounded font-bold transition-all duration-200" data-filter="ai/ml">AI/ML</button>
+            <button class="filter-btn h-10 border-black border-2 px-4 bg-cyan-200 hover:bg-cyan-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] rounded font-bold transition-all duration-200" data-filter="web development">WEB DEV</button>
+            <button class="filter-btn h-10 border-black border-2 px-4 bg-pink-200 hover:bg-pink-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] rounded font-bold transition-all duration-200" data-filter="blockchain">BLOCKCHAIN</button>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white to-violet-50 transition-all duration-200 backdrop-blur-sm" data-category="ai/ml">
+              <div class="h-48 border-black border-b-4 overflow-hidden">
+                <img src="./assets/images/project-1.jpg" alt="RAG Project" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-black mb-2">INTELLIGENT DOCUMENT ANALYSIS (RAG)</h3>
+                <p class="bg-violet-200 inline-block px-2 py-1 text-sm font-bold border border-black mb-2">AI/ML</p>
+                <p class="text-sm">Advanced document analysis using RAG architecture for intelligent information extraction.</p>
+              </div>
+            </div>
+            
+            <div class="project-card border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white to-cyan-50 transition-all duration-200 backdrop-blur-sm" data-category="web development">
+              <div class="h-48 border-black border-b-4 overflow-hidden">
+                <img src="./assets/images/project-2.png" alt="Ride On" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-black mb-2">RIDE ON</h3>
+                <p class="bg-cyan-200 inline-block px-2 py-1 text-sm font-bold border border-black mb-2">WEB DEV</p>
+                <p class="text-sm">Full-stack motorcycle tracking application with real-time features.</p>
+              </div>
+            </div>
+            
+            <div class="project-card border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white to-pink-50 transition-all duration-200 backdrop-blur-sm" data-category="blockchain">
+              <div class="h-48 border-black border-b-4 overflow-hidden">
+                <img src="./assets/images/project-3.jpg" alt="Bestiary" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-black mb-2">BESTIARY (NFT COLLECTIBLES)</h3>
+                <p class="bg-pink-200 inline-block px-2 py-1 text-sm font-bold border border-black mb-2">BLOCKCHAIN</p>
+                <p class="text-sm">NFT collectible platform for digital creatures with smart contract integration.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="page-content hidden" id="contact">
+      <div class="w-full border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white via-pink-50 to-rose-50 transition-all duration-200 backdrop-blur-sm bg-opacity-95">
+        <div class="p-8">
+          <h2 class="text-3xl font-black mb-6">CONTACT</h2>
+          
+          <form class="space-y-6" data-form>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input type="text" name="fullname" placeholder="FULL NAME" required class="w-full p-4 border-black border-2 rounded font-bold placeholder-gray-500 focus:outline-none focus:shadow-[2px_2px_0px_rgba(0,0,0,1)]" data-form-input>
+              <input type="email" name="email" placeholder="EMAIL ADDRESS" required class="w-full p-4 border-black border-2 rounded font-bold placeholder-gray-500 focus:outline-none focus:shadow-[2px_2px_0px_rgba(0,0,0,1)]" data-form-input>
+            </div>
+            <textarea name="message" placeholder="YOUR MESSAGE" required rows="6" class="w-full p-4 border-black border-2 rounded font-bold placeholder-gray-500 focus:outline-none focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] resize-none" data-form-input></textarea>
+            <button type="submit" disabled class="h-12 border-black border-2 px-8 bg-lime-200 hover:bg-lime-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-lime-400 rounded-md font-bold transition-all duration-200 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed" data-form-btn>
+              <span>✈️</span> SEND MESSAGE
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 
 
 
 
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    // Navigation functionality
+    const navBtns = document.querySelectorAll('.nav-btn');
+    const pageContents = document.querySelectorAll('.page-content');
+    
+    navBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-nav-link');
+        
+        // Remove active class from all nav buttons
+        navBtns.forEach(b => b.classList.remove('active', 'shadow-[2px_2px_0px_rgba(0,0,0,1)]'));
+        // Add active class to clicked button
+        btn.classList.add('active', 'shadow-[2px_2px_0px_rgba(0,0,0,1)]');
+        
+        // Hide all page contents
+        pageContents.forEach(page => page.classList.add('hidden'));
+        // Show target page
+        document.getElementById(target).classList.remove('hidden');
+      });
+    });
+    
+    // Project filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        
+        // Remove active class from all filter buttons
+        filterBtns.forEach(b => b.classList.remove('active', 'shadow-[2px_2px_0px_rgba(0,0,0,1)]'));
+        // Add active class to clicked button
+        btn.classList.add('active', 'shadow-[2px_2px_0px_rgba(0,0,0,1)]');
+        
+        // Filter projects
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Form validation
+    const form = document.querySelector('[data-form]');
+    const formInputs = document.querySelectorAll('[data-form-input]');
+    const formBtn = document.querySelector('[data-form-btn]');
+    
+    formInputs.forEach(input => {
+      input.addEventListener('input', () => {
+        if (form.checkValidity()) {
+          formBtn.removeAttribute('disabled');
+        } else {
+          formBtn.setAttribute('disabled', '');
+        }
+      });
+    });
+  </script>
 
 </body>
 
