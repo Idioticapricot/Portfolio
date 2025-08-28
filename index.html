@@ -23,13 +23,9 @@
     - tailwind css
   -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!--
-    - font awesome icons
-  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -59,6 +55,12 @@
       }
     }
   </script>
+  
+  <!--
+    - font awesome icons
+  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
   <!--
     - google font link
@@ -152,7 +154,7 @@
   </style>
 </head>
 
-<body class="bg-gradient-to-br from-yellow-100 via-pink-50 to-cyan-100 min-h-screen relative overflow-x-hidden">
+<body class="bg-gradient-to-br from-yellow-100 via-pink-50 to-cyan-100 dark:from-yellow-900 dark:via-yellow-800 dark:to-orange-900 min-h-screen relative overflow-x-hidden transition-colors duration-300">
   <!-- Dynamic Background Elements -->
   <div class="fixed inset-0 -z-10">
     <!-- Animated shapes -->
@@ -171,7 +173,7 @@
   <div class="max-w-6xl mx-auto p-4 lg:p-8">
     
     <!-- Header/Profile Card -->
-    <div class="w-full border-black border-4 rounded-lg hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-yellow-200 via-yellow-300 to-orange-200 mb-8 transition-all duration-300 pattern-dots card-tilt floating">
+    <div class="w-full border-black border-4 rounded-lg hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-yellow-200 via-yellow-300 to-orange-200 dark:from-yellow-600 dark:via-yellow-500 dark:to-orange-500 mb-8 transition-all duration-300 pattern-dots card-tilt floating">
       <div class="p-8 relative">
         <!-- Decorative elements -->
         <div class="absolute top-4 right-4 w-8 h-8 bg-black rotate-45"></div>
@@ -183,20 +185,20 @@
             <div class="absolute -top-2 -right-2 w-6 h-6 bg-lime-300 border-2 border-black rounded-full animate-bounce"></div>
           </div>
           <div class="text-center lg:text-left">
-            <h1 class="text-3xl sm:text-4xl lg:text-6xl font-black mb-3 text-black">A.KARTHIKEYA</h1>
+            <h1 class="text-3xl sm:text-4xl lg:text-6xl font-black mb-3 text-black dark:text-white" id="typing-text">A.KARTHIKEYA</h1>
             <p class="text-lg sm:text-xl font-bold mb-2 bg-black text-yellow-300 px-4 py-2 border-2 border-black rounded-lg inline-block">Computer Science Student & Developer</p>
             <p class="text-base sm:text-lg font-bold mb-4 text-black">AI/ML | Web3 Enthusiast | Full-Stack Developer</p>
             
             
             <!-- Social Links -->
             <div class="flex gap-4 justify-center lg:justify-start mt-6">
-              <a href="https://in.linkedin.com/in/karthikeya-atthavelli-3a2291213" target="_blank" class="bg-black text-yellow-300 border-2 border-black px-4 py-2 rounded-lg font-black hover:bg-gray-800 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:scale-105">
+              <a href="https://in.linkedin.com/in/karthikeya-atthavelli-3a2291213" target="_blank" class="bg-black dark:bg-white text-yellow-300 dark:text-black border-2 border-black dark:border-white px-4 py-2 rounded-lg font-black hover:bg-gray-800 dark:hover:bg-gray-200 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_rgba(255,255,255,1)] transition-all duration-200 transform hover:scale-105">
                 <i class="fab fa-linkedin-in"></i>
               </a>
-              <a href="https://github.com/Idioticapricot" target="_blank" class="bg-yellow-300 text-black border-2 border-black px-4 py-2 rounded-lg font-black hover:bg-yellow-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:scale-105">
+              <a href="https://github.com/Idioticapricot" target="_blank" class="bg-yellow-300 dark:bg-yellow-400 text-black border-2 border-black dark:border-white px-4 py-2 rounded-lg font-black hover:bg-yellow-400 dark:hover:bg-yellow-500 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_rgba(255,255,255,1)] transition-all duration-200 transform hover:scale-105">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="mailto:akarthikeyasmail@gmail.com" class="bg-black text-yellow-300 border-2 border-black px-4 py-2 rounded-lg font-black hover:bg-gray-800 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:scale-105">
+              <a href="mailto:akarthikeyasmail@gmail.com" class="bg-black dark:bg-white text-yellow-300 dark:text-black border-2 border-black dark:border-white px-4 py-2 rounded-lg font-black hover:bg-gray-800 dark:hover:bg-gray-200 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_rgba(255,255,255,1)] transition-all duration-200 transform hover:scale-105">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>
@@ -223,6 +225,16 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="flex justify-end mb-4">
+      <button id="theme-toggle" class="bg-black text-yellow-300 border-2 border-black px-4 py-2 rounded-lg font-black hover:bg-gray-800 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:scale-105">
+        <i class="fas fa-moon dark:hidden"></i>
+        <i class="fas fa-sun hidden dark:inline"></i>
+        <span class="ml-2 dark:hidden">DARK</span>
+        <span class="ml-2 hidden dark:inline">LIGHT</span>
+      </button>
     </div>
 
     <!-- Navigation -->
@@ -356,6 +368,29 @@
               <h4 class="text-xl font-black text-black">HackRX Hackathon Finalist</h4>
               <p class="font-bold text-sm mb-2 bg-black text-yellow-300 inline-block px-3 py-1 rounded">2024</p>
               <p class="font-medium text-black">Top 30 out of 70,000+ participants for building a RAG-based document analysis system.</p>
+            </div>
+          </div>
+
+          <!-- Currently Learning -->
+          <div class="mb-10">
+            <h3 class="text-2xl font-black mb-6 bg-yellow-300 text-black inline-block px-6 py-3 border-black border-3 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)] transform -rotate-1"><i class="fas fa-seedling"></i> CURRENTLY LEARNING</h3>
+            <div class="space-y-4 bg-white p-6 border-black border-3 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+              <div class="learning-item">
+                <h4 class="font-black text-black mb-2"><i class="fas fa-leaf"></i> Spring Boot & Microservices</h4>
+                <p class="text-sm text-gray-700 font-medium">Growing backend engineering skills</p>
+              </div>
+              <div class="learning-item">
+                <h4 class="font-black text-black mb-2"><i class="fab fa-rust"></i> Solana Smart Contracts (Rust)</h4>
+                <p class="text-sm text-gray-700 font-medium">Expanding Web3 + blockchain expertise</p>
+              </div>
+              <div class="learning-item">
+                <h4 class="font-black text-black mb-2"><i class="fab fa-aws"></i> Cloud Computing (AWS Lambda, API Gateway, S3)</h4>
+                <p class="text-sm text-gray-700 font-medium">Building scalable cloud-native apps</p>
+              </div>
+              <div class="learning-item">
+                <h4 class="font-black text-black mb-2"><i class="fas fa-code-branch"></i> Advanced Data Structures & Algorithms</h4>
+                <p class="text-sm text-gray-700 font-medium">Sharpening problem-solving foundation</p>
+              </div>
             </div>
           </div>
 
@@ -553,6 +588,58 @@
 
 
   <script>
+    // Smooth scrolling
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Dark mode functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    // Check for saved theme or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') {
+      html.classList.add('dark');
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+    
+    // Typing animation
+    const typingText = document.getElementById('typing-text');
+    const text = 'A.KARTHIKEYA';
+    let index = 0;
+    let isDeleting = false;
+    
+    function typeWriter() {
+      if (!isDeleting && index < text.length) {
+        typingText.textContent = text.substring(0, index + 1) + '|';
+        index++;
+        setTimeout(typeWriter, 150);
+      } else if (!isDeleting && index === text.length) {
+        typingText.textContent = text;
+        setTimeout(() => {
+          isDeleting = true;
+          typeWriter();
+        }, 5000);
+      } else if (isDeleting && index > 0) {
+        typingText.textContent = text.substring(0, index - 1) + '|';
+        index--;
+        setTimeout(typeWriter, 100);
+      } else if (isDeleting && index === 0) {
+        isDeleting = false;
+        typingText.textContent = '|';
+        setTimeout(typeWriter, 500);
+      }
+    }
+    
+    // Start typing animation after page load
+    window.addEventListener('load', () => {
+      typingText.textContent = '|';
+      setTimeout(typeWriter, 500);
+    });
+    
     // Navigation functionality
     const navBtns = document.querySelectorAll('.nav-btn');
     const pageContents = document.querySelectorAll('.page-content');
@@ -561,20 +648,22 @@
       btn.addEventListener('click', () => {
         const target = btn.getAttribute('data-nav-link');
         
-        // Reset all nav buttons to black background
+        // Reset all nav buttons
         navBtns.forEach(b => {
           b.classList.remove('active', 'bg-yellow-300', 'text-black');
           b.classList.add('bg-black', 'text-yellow-300');
         });
         
-        // Make clicked button yellow (active)
+        // Make clicked button active
         btn.classList.add('active', 'bg-yellow-300', 'text-black');
         btn.classList.remove('bg-black', 'text-yellow-300');
         
         // Hide all page contents
         pageContents.forEach(page => page.classList.add('hidden'));
-        // Show target page
-        document.getElementById(target).classList.remove('hidden');
+        // Show target page with smooth transition
+        const targetPage = document.getElementById(target);
+        targetPage.classList.remove('hidden');
+        targetPage.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
     
@@ -586,13 +675,13 @@
       btn.addEventListener('click', () => {
         const filter = btn.getAttribute('data-filter');
         
-        // Reset all filter buttons to black background
+        // Reset all filter buttons
         filterBtns.forEach(b => {
           b.classList.remove('active', 'bg-yellow-300', 'text-black');
           b.classList.add('bg-black', 'text-yellow-300');
         });
         
-        // Make clicked button yellow (active)
+        // Make clicked button active
         btn.classList.add('active', 'bg-yellow-300', 'text-black');
         btn.classList.remove('bg-black', 'text-yellow-300');
         
