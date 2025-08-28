@@ -6,6 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A.Karthikeya - Personal Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="A.Karthikeya - Computer Science Student & Developer | AI/ML | Web3 | Full-Stack">
+  <meta property="og:title" content="A.Karthikeya - Portfolio">
+  <meta property="og:description" content="AI/ML, Web3, and Full-Stack Developer | Hackathon Finalist">
+  <meta property="og:image" content="./assets/images/my-avatar.png">
+  <meta name="keywords" content="AI, ML, Web3, Blockchain, Full-Stack Developer, React, Python, Solidity">
 
   <!--
     - favicon
@@ -16,6 +23,11 @@
     - tailwind css
   -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!--
+    - font awesome icons
+  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
     tailwind.config = {
       theme: {
@@ -171,120 +183,123 @@
             <div class="absolute -top-2 -right-2 w-6 h-6 bg-lime-300 border-2 border-black rounded-full animate-bounce"></div>
           </div>
           <div class="text-center lg:text-left">
-            <h1 class="text-4xl lg:text-6xl font-black mb-2 gradient-text">A.KARTHIKEYA</h1>
-            <p class="text-xl font-bold mb-4 bg-white px-4 py-2 border-2 border-black rounded-lg inline-block zigzag-border">Computer Science Student & Developer</p>
-            <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
-              <span class="bg-violet-300 text-black px-3 py-1 text-sm font-bold border-2 border-black rounded transform rotate-1 hover:rotate-0 transition-transform">AI/ML</span>
-              <span class="bg-cyan-300 text-black px-3 py-1 text-sm font-bold border-2 border-black rounded transform -rotate-1 hover:rotate-0 transition-transform">WEB DEV</span>
-              <span class="bg-pink-300 text-black px-3 py-1 text-sm font-bold border-2 border-black rounded transform rotate-1 hover:rotate-0 transition-transform">BLOCKCHAIN</span>
+            <h1 class="text-3xl sm:text-4xl lg:text-6xl font-black mb-3 text-black">A.KARTHIKEYA</h1>
+            <p class="text-lg sm:text-xl font-bold mb-2 bg-black text-yellow-300 px-4 py-2 border-2 border-black rounded-lg inline-block">Computer Science Student & Developer</p>
+            <p class="text-base sm:text-lg font-bold mb-4 text-black">AI/ML | Web3 Enthusiast | Full-Stack Developer</p>
+            
+            
+            <!-- Social Links -->
+            <div class="flex gap-4 justify-center lg:justify-start mt-6">
+              <a href="https://in.linkedin.com/in/karthikeya-atthavelli-3a2291213" target="_blank" class="bg-black text-yellow-300 border-2 border-black px-4 py-2 rounded-lg font-black hover:bg-gray-800 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:scale-105">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/Idioticapricot" target="_blank" class="bg-yellow-300 text-black border-2 border-black px-4 py-2 rounded-lg font-black hover:bg-yellow-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:scale-105">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:akarthikeyasmail@gmail.com" class="bg-black text-yellow-300 border-2 border-black px-4 py-2 rounded-lg font-black hover:bg-gray-800 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:scale-105">
+                <i class="fas fa-envelope"></i>
+              </a>
             </div>
           </div>
         </div>
         
         <!-- Contact Info -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-          <div class="bg-gradient-to-br from-white to-cyan-100 border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
-            <p class="font-black text-sm mb-1 bg-cyan-200 px-2 py-1 rounded border border-black inline-block">📧 EMAIL</p>
-            <a href="mailto:akarthikeyasmail@gmail.com" class="text-sm break-all hover:underline font-medium">akarthikeyasmail@gmail.com</a>
+          <div class="bg-white border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
+            <p class="font-black text-sm mb-2 bg-black text-yellow-300 px-2 py-1 rounded inline-block"><i class="fas fa-envelope"></i> EMAIL</p>
+            <a href="mailto:akarthikeyasmail@gmail.com" class="text-sm break-all hover:underline font-medium text-black block">akarthikeyasmail@gmail.com</a>
           </div>
-          <div class="bg-gradient-to-br from-white to-pink-100 border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
-            <p class="font-black text-sm mb-1 bg-pink-200 px-2 py-1 rounded border border-black inline-block">📱 PHONE</p>
-            <a href="tel:+919110568758" class="text-sm hover:underline font-medium">+91 9110568758</a>
+          <div class="bg-yellow-100 border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
+            <p class="font-black text-sm mb-2 bg-yellow-300 text-black px-2 py-1 rounded border border-black inline-block"><i class="fas fa-phone"></i> PHONE</p>
+            <a href="tel:+919110568758" class="text-sm hover:underline font-medium text-black block">+91 9110568758</a>
           </div>
-          <div class="bg-gradient-to-br from-white to-lime-100 border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
-            <p class="font-black text-sm mb-1 bg-lime-200 px-2 py-1 rounded border border-black inline-block">🎂 BIRTHDAY</p>
-            <p class="text-sm font-medium">April 4, 2006</p>
+          <div class="bg-white border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
+            <p class="font-black text-sm mb-1 bg-black text-yellow-300 px-2 py-1 rounded inline-block"><i class="fas fa-birthday-cake"></i> BIRTHDAY</p>
+            <p class="text-sm font-medium text-black">April 4, 2006</p>
           </div>
-          <div class="bg-gradient-to-br from-white to-orange-100 border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
-            <p class="font-black text-sm mb-1 bg-orange-200 px-2 py-1 rounded border border-black inline-block">📍 LOCATION</p>
-            <p class="text-sm font-medium">Hyderabad, India</p>
+          <div class="bg-yellow-100 border-black border-3 p-4 rounded-lg hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200 transform hover:-translate-y-1">
+            <p class="font-black text-sm mb-1 bg-yellow-300 text-black px-2 py-1 rounded border border-black inline-block"><i class="fas fa-map-marker-alt"></i> LOCATION</p>
+            <p class="text-sm font-medium text-black">Hyderabad, India</p>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Navigation -->
-    <div class="flex flex-wrap gap-4 mb-8 justify-center relative">
+    <div class="flex flex-wrap gap-2 sm:gap-4 mb-8 justify-center relative">
       <!-- Decorative background -->
       <div class="absolute inset-0 pattern-grid opacity-10 -z-10"></div>
       
-      <button class="h-12 border-black border-3 px-6 bg-gradient-to-r from-cyan-200 to-cyan-300 hover:from-cyan-300 hover:to-cyan-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:bg-cyan-400 rounded-lg font-black transition-all duration-200 nav-btn active transform hover:scale-105 relative overflow-hidden" data-nav-link="about">
-        <span class="relative z-10">📚 ABOUT</span>
+      <button class="h-10 sm:h-12 border-black border-3 px-4 sm:px-6 bg-yellow-300 text-black hover:bg-yellow-400 hover:text-black hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-lg font-black transition-all duration-200 nav-btn active transform hover:scale-105 text-sm sm:text-base" data-nav-link="about">
+        ABOUT
       </button>
-      <button class="h-12 border-black border-3 px-6 bg-gradient-to-r from-pink-200 to-pink-300 hover:from-pink-300 hover:to-pink-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:bg-pink-400 rounded-lg font-black transition-all duration-200 nav-btn transform hover:scale-105 relative overflow-hidden" data-nav-link="resume">
-        <span class="relative z-10">📄 RESUME</span>
+      <button class="h-10 sm:h-12 border-black border-3 px-4 sm:px-6 bg-black text-yellow-300 hover:bg-yellow-300 hover:text-black hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-lg font-black transition-all duration-200 nav-btn transform hover:scale-105 text-sm sm:text-base" data-nav-link="resume">
+        RESUME
       </button>
-      <button class="h-12 border-black border-3 px-6 bg-gradient-to-r from-lime-200 to-lime-300 hover:from-lime-300 hover:to-lime-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:bg-lime-400 rounded-lg font-black transition-all duration-200 nav-btn transform hover:scale-105 relative overflow-hidden" data-nav-link="projects">
-        <span class="relative z-10">🚀 PROJECTS</span>
-      </button>
-      <button class="h-12 border-black border-3 px-6 bg-gradient-to-r from-orange-200 to-orange-300 hover:from-orange-300 hover:to-orange-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] active:bg-orange-400 rounded-lg font-black transition-all duration-200 nav-btn transform hover:scale-105 relative overflow-hidden" data-nav-link="contact">
-        <span class="relative z-10">📬 CONTACT</span>
+      <button class="h-10 sm:h-12 border-black border-3 px-4 sm:px-6 bg-black text-yellow-300 hover:bg-yellow-300 hover:text-black hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-lg font-black transition-all duration-200 nav-btn transform hover:scale-105 text-sm sm:text-base" data-nav-link="projects">
+        PROJECTS
       </button>
     </div>
 
     <!-- About Section -->
-    <div class="page-content" id="about">
-      <div class="w-full border-black border-4 rounded-lg hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white via-blue-50 to-purple-50 mb-8 transition-all duration-300 relative overflow-hidden backdrop-blur-sm bg-opacity-90">
+    <div class="page-content mb-16" id="about">
+      <div class="w-full border-black border-4 rounded-lg hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white to-yellow-50 mb-12 transition-all duration-300 relative overflow-hidden backdrop-blur-sm bg-opacity-90">
         <!-- Decorative elements -->
-        <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-200 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
-        <div class="absolute bottom-0 left-0 w-24 h-24 bg-pink-200 rounded-full translate-y-12 -translate-x-12 opacity-50"></div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-200 rounded-full -translate-y-16 translate-x-16 opacity-30"></div>
+        <div class="absolute bottom-0 left-0 w-24 h-24 bg-black rounded-full translate-y-12 -translate-x-12 opacity-10"></div>
         
         <div class="p-8 relative z-10">
-          <h2 class="text-3xl font-black mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent relative">
-            💻 ABOUT ME
-            <div class="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded"></div>
+          <h2 class="text-3xl font-black mb-6 text-black relative">
+            <i class="fas fa-user"></i> ABOUT ME
+            <div class="absolute -bottom-2 left-0 w-20 h-1 bg-yellow-300 rounded border border-black"></div>
           </h2>
-          <div class="space-y-4 text-lg relative">
-            <p class="bg-gradient-to-r from-cyan-100 to-blue-100 p-4 rounded-lg border-l-4 border-cyan-400 font-medium">I'm a Computer Science student who treats technology like a playground.</p>
-            <p class="bg-gradient-to-r from-pink-100 to-purple-100 p-4 rounded-lg border-l-4 border-pink-400 font-medium">Whether it's teaching AI to read financial reports, minting creatures on the blockchain, or tracking motorcycles with full-stack apps, I love blending creativity with engineering.</p>
-            <p class="bg-gradient-to-r from-yellow-100 to-orange-100 p-4 rounded-lg border-l-4 border-yellow-400 font-bold text-xl">🎯 My goal: build tools that feel futuristic, but solve today's problems.</p>
+          <div class="space-y-6 text-base sm:text-lg relative max-w-4xl">
+            <p class="bg-white p-4 sm:p-6 rounded-lg border-3 border-black font-medium shadow-[4px_4px_0px_rgba(0,0,0,1)]">I'm a CS student passionate about building intelligent and scalable apps.</p>
+            <p class="bg-white p-4 sm:p-6 rounded-lg border-3 border-black font-medium shadow-[4px_4px_0px_rgba(0,0,0,1)]">From AI systems to blockchain collectibles, I blend creativity with engineering.</p>
+            <p class="bg-white p-4 sm:p-6 rounded-lg border-3 border-black font-bold text-lg sm:text-xl shadow-[4px_4px_0px_rgba(0,0,0,1)]"><i class="fas fa-bullseye"></i> My goal: craft futuristic tools that solve today's problems.</p>
           </div>
         </div>
       </div>
 
       <!-- Services Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-violet-200 via-violet-300 to-purple-200 transition-all duration-300 transform hover:-rotate-1 hover:scale-105 relative overflow-hidden">
-          <div class="absolute top-2 right-2 text-2xl">🤖</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-yellow-200 to-yellow-300 transition-all duration-300 transform hover:-rotate-1 hover:scale-105 relative overflow-hidden">
           <div class="p-6 relative z-10">
-            <h3 class="text-xl font-black mb-3 text-purple-900">AI/ML DEVELOPMENT</h3>
-            <p class="font-medium text-purple-800">Building intelligent systems with PyTorch, LangChain, and LLM APIs.</p>
+            <h3 class="text-xl font-black mb-3 text-black"><i class="fas fa-brain"></i> AI/ML DEVELOPMENT</h3>
+            <p class="font-medium text-black">Building intelligent systems with PyTorch, LangChain, and LLM APIs.</p>
             <div class="mt-3 flex gap-2">
-              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">PyTorch</span>
-              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">LangChain</span>
+              <span class="bg-black text-yellow-300 px-2 py-1 text-xs font-bold border border-black rounded">PyTorch</span>
+              <span class="bg-black text-yellow-300 px-2 py-1 text-xs font-bold border border-black rounded">LangChain</span>
             </div>
           </div>
         </div>
-        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-cyan-200 via-cyan-300 to-blue-200 transition-all duration-300 transform hover:rotate-1 hover:scale-105 relative overflow-hidden">
-          <div class="absolute top-2 right-2 text-2xl">🌐</div>
+        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-black to-gray-800 transition-all duration-300 transform hover:rotate-1 hover:scale-105 relative overflow-hidden">
           <div class="p-6 relative z-10">
-            <h3 class="text-xl font-black mb-3 text-blue-900">FULL-STACK WEB DEV</h3>
-            <p class="font-medium text-blue-800">Developing scalable applications using React, FastAPI, Node.js, and Supabase.</p>
+            <h3 class="text-xl font-black mb-3 text-yellow-300"><i class="fas fa-code"></i> FULL-STACK WEB DEV</h3>
+            <p class="font-medium text-yellow-100">Developing scalable applications using React, FastAPI, Node.js, and Supabase.</p>
             <div class="mt-3 flex gap-2">
-              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">React</span>
-              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">FastAPI</span>
+              <span class="bg-yellow-300 text-black px-2 py-1 text-xs font-bold border border-yellow-300 rounded">React</span>
+              <span class="bg-yellow-300 text-black px-2 py-1 text-xs font-bold border border-yellow-300 rounded">FastAPI</span>
             </div>
           </div>
         </div>
-        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-pink-200 via-pink-300 to-rose-200 transition-all duration-300 transform hover:-rotate-1 hover:scale-105 relative overflow-hidden">
-          <div class="absolute top-2 right-2 text-2xl">⛓️</div>
+        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-black to-gray-800 transition-all duration-300 transform hover:-rotate-1 hover:scale-105 relative overflow-hidden">
           <div class="p-6 relative z-10">
-            <h3 class="text-xl font-black mb-3 text-rose-900">BLOCKCHAIN DAPPS</h3>
-            <p class="font-medium text-rose-800">Smart contract development with Solidity, Web3.js, and IPFS.</p>
+            <h3 class="text-xl font-black mb-3 text-yellow-300"><i class="fab fa-ethereum"></i> BLOCKCHAIN DAPPS</h3>
+            <p class="font-medium text-yellow-100">Smart contract development with Solidity, Web3.js, and IPFS.</p>
             <div class="mt-3 flex gap-2">
-              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">Solidity</span>
-              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">Web3.js</span>
+              <span class="bg-yellow-300 text-black px-2 py-1 text-xs font-bold border border-yellow-300 rounded">Solidity</span>
+              <span class="bg-yellow-300 text-black px-2 py-1 text-xs font-bold border border-yellow-300 rounded">Web3.js</span>
             </div>
           </div>
         </div>
-        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-lime-200 via-lime-300 to-green-200 transition-all duration-300 transform hover:rotate-1 hover:scale-105 relative overflow-hidden">
-          <div class="absolute top-2 right-2 text-2xl">📈</div>
+        <div class="border-black border-4 rounded-lg hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-yellow-200 to-yellow-300 transition-all duration-300 transform hover:rotate-1 hover:scale-105 relative overflow-hidden">
           <div class="p-6 relative z-10">
-            <h3 class="text-xl font-black mb-3 text-green-900">DATA ANALYSIS</h3>
-            <p class="font-medium text-green-800">Data processing and visualization with Pandas, NumPy, and Matplotlib.</p>
+            <h3 class="text-xl font-black mb-3 text-black"><i class="fas fa-chart-bar"></i> DATA ANALYSIS</h3>
+            <p class="font-medium text-black">Data processing and visualization with Pandas, NumPy, and Matplotlib.</p>
             <div class="mt-3 flex gap-2">
-              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">Pandas</span>
-              <span class="bg-white px-2 py-1 text-xs font-bold border border-black rounded">NumPy</span>
+              <span class="bg-black text-yellow-300 px-2 py-1 text-xs font-bold border border-black rounded">Pandas</span>
+              <span class="bg-black text-yellow-300 px-2 py-1 text-xs font-bold border border-black rounded">NumPy</span>
             </div>
           </div>
         </div>
@@ -292,108 +307,119 @@
     </div>
 
     <!-- Resume Section -->
-    <div class="page-content hidden" id="resume">
-      <div class="w-full border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white via-yellow-50 to-orange-50 mb-8 transition-all duration-200 backdrop-blur-sm bg-opacity-95">
+    <div class="page-content hidden mb-16" id="resume">
+      <div class="w-full border-black border-4 rounded-lg hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white to-yellow-50 mb-8 transition-all duration-300 backdrop-blur-sm bg-opacity-95">
         <div class="p-8">
-          <h2 class="text-3xl font-black mb-6">RESUME</h2>
+          <h2 class="text-3xl font-black mb-8 text-black relative">
+            <i class="fas fa-file-alt"></i> RESUME
+            <div class="absolute -bottom-2 left-0 w-20 h-1 bg-yellow-300 rounded border border-black"></div>
+          </h2>
           
           <!-- PDF Buttons -->
-          <div class="flex flex-wrap gap-4 mb-8">
-            <button onclick="window.open('./assets/resume.pdf', '_blank')" class="h-12 border-black border-2 px-6 bg-cyan-200 hover:bg-cyan-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-cyan-400 rounded-md font-bold transition-all duration-200 flex items-center gap-2">
-              <span>📄</span> VIEW PDF
+          <div class="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
+            <button onclick="window.open('./assets/A.Karthikeya_Resume.pdf', '_blank')" class="h-12 border-black border-3 px-6 sm:px-8 bg-yellow-300 text-black hover:bg-yellow-400 hover:text-black hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-lg font-black transition-all duration-200 flex items-center justify-center gap-2 transform hover:scale-105 text-sm sm:text-base">
+              <i class="fas fa-eye"></i> VIEW PDF
             </button>
-            <a href="./assets/resume.pdf" download="A.Karthikeya_Resume.pdf" class="h-12 border-black border-2 px-6 bg-lime-200 hover:bg-lime-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-lime-400 rounded-md font-bold transition-all duration-200 flex items-center gap-2 no-underline text-black">
-              <span>⬇️</span> DOWNLOAD PDF
+            <a href="./assets/A.Karthikeya_Resume.pdf" download="A.Karthikeya_Resume.pdf" class="h-12 border-black border-3 px-6 sm:px-8 bg-black text-yellow-300 hover:bg-yellow-300 hover:text-black hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-lg font-black transition-all duration-200 flex items-center justify-center gap-2 no-underline transform hover:scale-105 text-sm sm:text-base">
+              <i class="fas fa-download"></i> DOWNLOAD PDF
             </a>
           </div>
 
           <!-- Education -->
-          <div class="mb-8">
-            <h3 class="text-2xl font-black mb-4 bg-yellow-200 inline-block px-4 py-2 border-black border-2">EDUCATION</h3>
-            <div class="bg-gray-50 border-black border-2 p-6 rounded">
-              <h4 class="text-xl font-bold">JNTU Hyderabad</h4>
-              <p class="font-bold text-sm mb-2">2023 — Present</p>
-              <p>B.Tech in Computer Science & Engineering | CGPA: 7.5/10</p>
+          <div class="mb-10">
+            <h3 class="text-2xl font-black mb-6 bg-yellow-300 text-black inline-block px-6 py-3 border-black border-3 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)] transform -rotate-1"><i class="fas fa-graduation-cap"></i> EDUCATION</h3>
+            <div class="bg-yellow-100 border-black border-3 p-6 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+              <div class="absolute top-2 right-2 w-6 h-6 bg-black rounded-full opacity-20"></div>
+              <h4 class="text-xl font-black text-black">JNTU Hyderabad</h4>
+              <p class="font-bold text-sm mb-2 bg-black text-yellow-300 inline-block px-3 py-1 rounded">2023 — Present</p>
+              <p class="font-medium text-black">B.Tech in Computer Science & Engineering</p>
             </div>
           </div>
 
           <!-- Experience -->
-          <div class="mb-8">
-            <h3 class="text-2xl font-black mb-4 bg-pink-200 inline-block px-4 py-2 border-black border-2">EXPERIENCE</h3>
-            <div class="bg-gray-50 border-black border-2 p-6 rounded">
-              <h4 class="text-xl font-bold">Data Analyst Intern - AICTE</h4>
-              <p class="font-bold text-sm mb-2">Nov 2024 — Jan 2025</p>
-              <p>Analyzed 50,000+ records using Pandas/NumPy, built data visualizations (heatmaps, bar charts) with Matplotlib/Seaborn, and automated Excel preprocessing (40% faster).</p>
+          <div class="mb-10">
+            <h3 class="text-2xl font-black mb-6 bg-black text-yellow-300 inline-block px-6 py-3 border-black border-3 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)] transform rotate-1"><i class="fas fa-briefcase"></i> EXPERIENCE</h3>
+            <div class="bg-yellow-100 border-black border-3 p-6 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+              <div class="absolute bottom-2 left-2 w-8 h-8 bg-yellow-300 rotate-45 opacity-30"></div>
+              <h4 class="text-xl font-black text-black">Data Analyst Intern - AICTE</h4>
+              <p class="font-bold text-sm mb-2 bg-yellow-300 text-black inline-block px-3 py-1 rounded border border-black">Nov 2024 — Jan 2025</p>
+              <p class="font-medium text-black">Analyzed 50,000+ records using Pandas/NumPy, built data visualizations (heatmaps, bar charts) with Matplotlib/Seaborn, and automated Excel preprocessing (40% faster).</p>
             </div>
           </div>
 
           <!-- Achievements -->
-          <div class="mb-8">
-            <h3 class="text-2xl font-black mb-4 bg-orange-200 inline-block px-4 py-2 border-black border-2">ACHIEVEMENTS</h3>
-            <div class="bg-gray-50 border-black border-2 p-6 rounded">
-              <h4 class="text-xl font-bold">HackRX Hackathon Finalist</h4>
-              <p class="font-bold text-sm mb-2">2024</p>
-              <p>Top 30 out of 70,000+ participants for building a RAG-based document analysis system.</p>
+          <div class="mb-10">
+            <h3 class="text-2xl font-black mb-6 bg-yellow-300 text-black inline-block px-6 py-3 border-black border-3 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)] transform -rotate-1"><i class="fas fa-trophy"></i> ACHIEVEMENTS</h3>
+            <div class="bg-yellow-100 border-black border-3 p-6 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+              <div class="absolute top-2 right-2 w-4 h-4 bg-black rounded-full opacity-20"></div>
+              <div class="absolute bottom-2 right-2 w-6 h-6 bg-black rounded-full opacity-10"></div>
+              <h4 class="text-xl font-black text-black">HackRX Hackathon Finalist</h4>
+              <p class="font-bold text-sm mb-2 bg-black text-yellow-300 inline-block px-3 py-1 rounded">2024</p>
+              <p class="font-medium text-black">Top 30 out of 70,000+ participants for building a RAG-based document analysis system.</p>
             </div>
           </div>
 
           <!-- Skills -->
           <div class="relative">
-            <h3 class="text-2xl font-black mb-6 bg-gradient-to-r from-cyan-200 to-blue-200 inline-block px-6 py-3 border-black border-3 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)] transform -rotate-1">
-              💪 MY SKILLS
+            <h3 class="text-2xl font-black mb-6 bg-black text-yellow-300 inline-block px-6 py-3 border-black border-3 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)] transform rotate-1">
+              <i class="fas fa-cogs"></i> MY SKILLS
             </h3>
-            <div class="space-y-6 bg-gradient-to-br from-cyan-50 via-white to-blue-50 p-6 border-black border-3 rounded-lg shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+            <div class="space-y-6 bg-white p-8 border-black border-4 rounded-lg shadow-[6px_6px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+              <!-- Decorative elements -->
+              <div class="absolute top-4 right-4 w-12 h-12 bg-yellow-200 rounded-full opacity-30"></div>
+              <div class="absolute bottom-4 left-4 w-8 h-8 bg-black rotate-45 opacity-10"></div>
+              
               <div class="skill-item transform hover:scale-105 transition-transform duration-200">
                 <div class="flex justify-between mb-3">
-                  <span class="font-black text-lg flex items-center gap-2">🐍 Python</span>
-                  <span class="font-black text-lg bg-violet-200 px-3 py-1 border-2 border-black rounded-full">90%</span>
+                  <span class="font-black text-lg text-black">Python</span>
+                  <span class="font-black text-lg bg-black text-yellow-300 px-3 py-1 border-2 border-black rounded-full">90%</span>
                 </div>
-                <div class="w-full border-black border-3 h-8 bg-white rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
-                  <div class="h-full bg-gradient-to-r from-violet-200 to-violet-400 flex items-center justify-end pr-2 font-bold text-sm" style="width: 90%">
+                <div class="w-full border-black border-3 h-8 bg-yellow-100 rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
+                  <div class="h-full bg-gradient-to-r from-yellow-300 to-yellow-400 flex items-center justify-end pr-2 font-bold text-sm text-black" style="width: 90%">
                     90%
                   </div>
                 </div>
               </div>
               <div class="skill-item transform hover:scale-105 transition-transform duration-200">
                 <div class="flex justify-between mb-3">
-                  <span class="font-black text-lg flex items-center gap-2">⚛️ React</span>
-                  <span class="font-black text-lg bg-cyan-200 px-3 py-1 border-2 border-black rounded-full">85%</span>
+                  <span class="font-black text-lg text-black">React</span>
+                  <span class="font-black text-lg bg-yellow-300 text-black px-3 py-1 border-2 border-black rounded-full">85%</span>
                 </div>
-                <div class="w-full border-black border-3 h-8 bg-white rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
-                  <div class="h-full bg-gradient-to-r from-cyan-200 to-cyan-400 flex items-center justify-end pr-2 font-bold text-sm" style="width: 85%">
+                <div class="w-full border-black border-3 h-8 bg-yellow-100 rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
+                  <div class="h-full bg-gradient-to-r from-black to-gray-800 flex items-center justify-end pr-2 font-bold text-sm text-yellow-300" style="width: 85%">
                     85%
                   </div>
                 </div>
               </div>
               <div class="skill-item transform hover:scale-105 transition-transform duration-200">
                 <div class="flex justify-between mb-3">
-                  <span class="font-black text-lg flex items-center gap-2">🚀 FastAPI / Node.js</span>
-                  <span class="font-black text-lg bg-pink-200 px-3 py-1 border-2 border-black rounded-full">80%</span>
+                  <span class="font-black text-lg text-black">FastAPI / Node.js</span>
+                  <span class="font-black text-lg bg-black text-yellow-300 px-3 py-1 border-2 border-black rounded-full">80%</span>
                 </div>
-                <div class="w-full border-black border-3 h-8 bg-white rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
-                  <div class="h-full bg-gradient-to-r from-pink-200 to-pink-400 flex items-center justify-end pr-2 font-bold text-sm" style="width: 80%">
+                <div class="w-full border-black border-3 h-8 bg-yellow-100 rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
+                  <div class="h-full bg-gradient-to-r from-yellow-300 to-yellow-400 flex items-center justify-end pr-2 font-bold text-sm text-black" style="width: 80%">
                     80%
                   </div>
                 </div>
               </div>
               <div class="skill-item transform hover:scale-105 transition-transform duration-200">
                 <div class="flex justify-between mb-3">
-                  <span class="font-black text-lg flex items-center gap-2">🤖 AI/ML</span>
-                  <span class="font-black text-lg bg-lime-200 px-3 py-1 border-2 border-black rounded-full">75%</span>
+                  <span class="font-black text-lg text-black">AI/ML</span>
+                  <span class="font-black text-lg bg-yellow-300 text-black px-3 py-1 border-2 border-black rounded-full">75%</span>
                 </div>
-                <div class="w-full border-black border-3 h-8 bg-white rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
-                  <div class="h-full bg-gradient-to-r from-lime-200 to-lime-400 flex items-center justify-end pr-2 font-bold text-sm" style="width: 75%">
+                <div class="w-full border-black border-3 h-8 bg-yellow-100 rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
+                  <div class="h-full bg-gradient-to-r from-black to-gray-800 flex items-center justify-end pr-2 font-bold text-sm text-yellow-300" style="width: 75%">
                     75%
                   </div>
                 </div>
               </div>
               <div class="skill-item transform hover:scale-105 transition-transform duration-200">
                 <div class="flex justify-between mb-3">
-                  <span class="font-black text-lg flex items-center gap-2">⛓️ Solidity / Web3</span>
-                  <span class="font-black text-lg bg-orange-200 px-3 py-1 border-2 border-black rounded-full">65%</span>
+                  <span class="font-black text-lg text-black">Solidity / Web3</span>
+                  <span class="font-black text-lg bg-black text-yellow-300 px-3 py-1 border-2 border-black rounded-full">65%</span>
                 </div>
-                <div class="w-full border-black border-3 h-8 bg-white rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
-                  <div class="h-full bg-gradient-to-r from-orange-200 to-orange-400 flex items-center justify-end pr-2 font-bold text-sm" style="width: 65%">
+                <div class="w-full border-black border-3 h-8 bg-yellow-100 rounded-lg overflow-hidden shadow-[2px_2px_0px_rgba(0,0,0,1)] skill-bar">
+                  <div class="h-full bg-gradient-to-r from-yellow-300 to-yellow-400 flex items-center justify-end pr-2 font-bold text-sm text-black" style="width: 65%">
                     65%
                   </div>
                 </div>
@@ -405,51 +431,111 @@
     </div>
 
     <!-- Projects Section -->
-    <div class="page-content hidden" id="projects">
-      <div class="w-full border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white via-green-50 to-lime-50 mb-8 transition-all duration-200 backdrop-blur-sm bg-opacity-95">
+    <div class="page-content hidden mb-16" id="projects">
+      <div class="w-full border-black border-4 rounded-lg hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white to-yellow-50 mb-8 transition-all duration-300 backdrop-blur-sm bg-opacity-95">
         <div class="p-8">
-          <h2 class="text-3xl font-black mb-6">PROJECTS</h2>
+          <h2 class="text-3xl font-black mb-8 text-black relative">
+            <i class="fas fa-rocket"></i> PROJECTS
+            <div class="absolute -bottom-2 left-0 w-24 h-1 bg-yellow-300 rounded border border-black"></div>
+          </h2>
           
           <!-- Filter Buttons -->
-          <div class="flex flex-wrap gap-4 mb-8">
-            <button class="filter-btn active h-10 border-black border-2 px-4 bg-yellow-200 hover:bg-yellow-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] rounded font-bold transition-all duration-200" data-filter="all">ALL</button>
-            <button class="filter-btn h-10 border-black border-2 px-4 bg-violet-200 hover:bg-violet-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] rounded font-bold transition-all duration-200" data-filter="ai/ml">AI/ML</button>
-            <button class="filter-btn h-10 border-black border-2 px-4 bg-cyan-200 hover:bg-cyan-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] rounded font-bold transition-all duration-200" data-filter="web development">WEB DEV</button>
-            <button class="filter-btn h-10 border-black border-2 px-4 bg-pink-200 hover:bg-pink-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] rounded font-bold transition-all duration-200" data-filter="blockchain">BLOCKCHAIN</button>
+          <div class="flex flex-wrap gap-2 sm:gap-4 mb-12 justify-center">
+            <button class="filter-btn active h-10 sm:h-12 border-black border-3 px-4 sm:px-6 bg-yellow-300 text-black hover:bg-yellow-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-lg font-black transition-all duration-200 transform hover:scale-105 text-sm sm:text-base" data-filter="all">
+              ALL
+            </button>
+            <button class="filter-btn h-10 sm:h-12 border-black border-3 px-4 sm:px-6 bg-black text-yellow-300 hover:bg-yellow-300 hover:text-black hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-lg font-black transition-all duration-200 transform hover:scale-105 text-sm sm:text-base" data-filter="ai/ml">
+              AI/ML
+            </button>
+            <button class="filter-btn h-10 sm:h-12 border-black border-3 px-4 sm:px-6 bg-black text-yellow-300 hover:bg-yellow-300 hover:text-black hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-lg font-black transition-all duration-200 transform hover:scale-105 text-sm sm:text-base" data-filter="web development">
+              WEB DEV
+            </button>
+            <button class="filter-btn h-10 sm:h-12 border-black border-3 px-4 sm:px-6 bg-black text-yellow-300 hover:bg-yellow-300 hover:text-black hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-lg font-black transition-all duration-200 transform hover:scale-105 text-sm sm:text-base" data-filter="blockchain">
+              BLOCKCHAIN
+            </button>
           </div>
 
           <!-- Projects Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="project-card border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white to-violet-50 transition-all duration-200 backdrop-blur-sm" data-category="ai/ml">
-              <div class="h-48 border-black border-b-4 overflow-hidden">
-                <img src="./assets/images/project-1.jpg" alt="RAG Project" class="w-full h-full object-cover">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- AI/ML Project -->
+            <div class="project-card border-black border-4 rounded-lg hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] bg-white transition-all duration-300 transform hover:-rotate-1 hover:scale-105 overflow-hidden" data-category="ai/ml">
+              <div class="h-48 border-black border-b-4 overflow-hidden relative">
+                <img src="./assets/images/project-1.jpg" alt="RAG Project" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
               </div>
               <div class="p-6">
-                <h3 class="text-xl font-black mb-2">INTELLIGENT DOCUMENT ANALYSIS (RAG)</h3>
-                <p class="bg-violet-200 inline-block px-2 py-1 text-sm font-bold border border-black mb-2">AI/ML</p>
-                <p class="text-sm">Advanced document analysis using RAG architecture for intelligent information extraction.</p>
+                <h3 class="text-lg font-black mb-3 text-black">INTELLIGENT DOCUMENT ANALYSIS</h3>
+                <p class="text-sm font-medium mb-4 text-gray-700"> Production-grade RAG for long-form financial documents with hybrid FAISS+BM25 and re-ranking (HackRX Top-30).</p>
+                
+                <!-- Tech Stack -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="bg-black text-yellow-300 px-2 py-1 text-xs font-bold rounded"><i class="fab fa-python"></i> Python</span>
+                  <span class="bg-yellow-300 text-black px-2 py-1 text-xs font-bold rounded border border-black">LangChain</span>
+                  <span class="bg-black text-yellow-300 px-2 py-1 text-xs font-bold rounded">RAG</span>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex gap-3">
+                  <a href="https://github.com/Idioticapricot/Hackrx6.0" target="_blank" class="flex-1 bg-black text-yellow-300 border-2 border-black px-3 py-2 rounded font-bold text-sm hover:bg-gray-800 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all duration-200 text-center no-underline">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                 
+                   
+                </div>
               </div>
             </div>
             
-            <div class="project-card border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white to-cyan-50 transition-all duration-200 backdrop-blur-sm" data-category="web development">
-              <div class="h-48 border-black border-b-4 overflow-hidden">
-                <img src="./assets/images/project-2.png" alt="Ride On" class="w-full h-full object-cover">
+            <!-- Web Dev Project -->
+            <div class="project-card border-black border-4 rounded-lg hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] bg-white transition-all duration-300 transform hover:rotate-1 hover:scale-105 overflow-hidden" data-category="web development">
+              <div class="h-48 border-black border-b-4 overflow-hidden relative">
+                <img src="./assets/images/project-2.png" alt="Ride On" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
               </div>
               <div class="p-6">
-                <h3 class="text-xl font-black mb-2">RIDE ON</h3>
-                <p class="bg-cyan-200 inline-block px-2 py-1 text-sm font-bold border border-black mb-2">WEB DEV</p>
-                <p class="text-sm">Full-stack motorcycle tracking application with real-time features.</p>
+                <h3 class="text-lg font-black mb-3 text-black">RIDE ON</h3>
+                <p class="text-sm font-medium mb-4 text-gray-700">Full-stack motorcycle maintenance app with predictive service reminders and real-time updates via Supabase. </p>
+                
+                <!-- Tech Stack -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="bg-black text-yellow-300 px-2 py-1 text-xs font-bold rounded"><i class="fab fa-react"></i> React</span>
+                  <span class="bg-yellow-300 text-black px-2 py-1 text-xs font-bold rounded border border-black"><i class="fab fa-node-js"></i> Node.js</span>
+                  <span class="bg-black text-yellow-300 px-2 py-1 text-xs font-bold rounded"><i class="fas fa-database"></i> MongoDB</span>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex gap-3">
+                  <a href="https://github.com/Idioticapricot/rideon-v-2" target="_blank" class="flex-1 bg-black text-yellow-300 border-2 border-black px-3 py-2 rounded font-bold text-sm hover:bg-gray-800 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all duration-200 text-center no-underline">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a href="https://rideon-v-2.vercel.app/" class="flex-1 bg-yellow-300 text-black border-2 border-black px-3 py-2 rounded font-bold text-sm hover:bg-yellow-400 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all duration-200 text-center no-underline">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                </div>
               </div>
             </div>
             
-            <div class="project-card border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white to-pink-50 transition-all duration-200 backdrop-blur-sm" data-category="blockchain">
-              <div class="h-48 border-black border-b-4 overflow-hidden">
-                <img src="./assets/images/project-3.jpg" alt="Bestiary" class="w-full h-full object-cover">
+            <!-- Blockchain Project -->
+            <div class="project-card border-black border-4 rounded-lg hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] bg-white transition-all duration-300 transform hover:-rotate-1 hover:scale-105 overflow-hidden" data-category="blockchain">
+              <div class="h-48 border-black border-b-4 overflow-hidden relative">
+                <img src="./assets/images/project-3.png" alt="Bestiary" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
               </div>
               <div class="p-6">
-                <h3 class="text-xl font-black mb-2">BESTIARY (NFT COLLECTIBLES)</h3>
-                <p class="bg-pink-200 inline-block px-2 py-1 text-sm font-bold border border-black mb-2">BLOCKCHAIN</p>
-                <p class="text-sm">NFT collectible platform for digital creatures with smart contract integration.</p>
+                <h3 class="text-lg font-black mb-3 text-black">BESTIARY NFT COLLECTIBLES</h3>
+                <p class="text-sm font-medium mb-4 text-gray-700">NFT dApp to mint, own, battle, and trade digital creatures using Solidity smart contracts and IPFS.</p>
+                
+                <!-- Tech Stack -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="bg-black text-yellow-300 px-2 py-1 text-xs font-bold rounded"><i class="fab fa-ethereum"></i> Solidity</span>
+                  <span class="bg-yellow-300 text-black px-2 py-1 text-xs font-bold rounded border border-black">Web3.js</span>
+                  <span class="bg-black text-yellow-300 px-2 py-1 text-xs font-bold rounded"><i class="fas fa-cube"></i> IPFS</span>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex gap-3">
+                  <a href="https://github.com/Idioticapricot/Bestiary" target="_blank" class="flex-1 bg-black text-yellow-300 border-2 border-black px-3 py-2 rounded font-bold text-sm hover:bg-gray-800 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all duration-200 text-center no-underline">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -457,25 +543,7 @@
       </div>
     </div>
 
-    <!-- Contact Section -->
-    <div class="page-content hidden" id="contact">
-      <div class="w-full border-black border-4 rounded-lg hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-gradient-to-br from-white via-pink-50 to-rose-50 transition-all duration-200 backdrop-blur-sm bg-opacity-95">
-        <div class="p-8">
-          <h2 class="text-3xl font-black mb-6">CONTACT</h2>
-          
-          <form class="space-y-6" data-form>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input type="text" name="fullname" placeholder="FULL NAME" required class="w-full p-4 border-black border-2 rounded font-bold placeholder-gray-500 focus:outline-none focus:shadow-[2px_2px_0px_rgba(0,0,0,1)]" data-form-input>
-              <input type="email" name="email" placeholder="EMAIL ADDRESS" required class="w-full p-4 border-black border-2 rounded font-bold placeholder-gray-500 focus:outline-none focus:shadow-[2px_2px_0px_rgba(0,0,0,1)]" data-form-input>
-            </div>
-            <textarea name="message" placeholder="YOUR MESSAGE" required rows="6" class="w-full p-4 border-black border-2 rounded font-bold placeholder-gray-500 focus:outline-none focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] resize-none" data-form-input></textarea>
-            <button type="submit" disabled class="h-12 border-black border-2 px-8 bg-lime-200 hover:bg-lime-300 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-lime-400 rounded-md font-bold transition-all duration-200 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed" data-form-btn>
-              <span>✈️</span> SEND MESSAGE
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
+
 
   </div>
 
@@ -493,10 +561,15 @@
       btn.addEventListener('click', () => {
         const target = btn.getAttribute('data-nav-link');
         
-        // Remove active class from all nav buttons
-        navBtns.forEach(b => b.classList.remove('active', 'shadow-[2px_2px_0px_rgba(0,0,0,1)]'));
-        // Add active class to clicked button
-        btn.classList.add('active', 'shadow-[2px_2px_0px_rgba(0,0,0,1)]');
+        // Reset all nav buttons to black background
+        navBtns.forEach(b => {
+          b.classList.remove('active', 'bg-yellow-300', 'text-black');
+          b.classList.add('bg-black', 'text-yellow-300');
+        });
+        
+        // Make clicked button yellow (active)
+        btn.classList.add('active', 'bg-yellow-300', 'text-black');
+        btn.classList.remove('bg-black', 'text-yellow-300');
         
         // Hide all page contents
         pageContents.forEach(page => page.classList.add('hidden'));
@@ -513,10 +586,15 @@
       btn.addEventListener('click', () => {
         const filter = btn.getAttribute('data-filter');
         
-        // Remove active class from all filter buttons
-        filterBtns.forEach(b => b.classList.remove('active', 'shadow-[2px_2px_0px_rgba(0,0,0,1)]'));
-        // Add active class to clicked button
-        btn.classList.add('active', 'shadow-[2px_2px_0px_rgba(0,0,0,1)]');
+        // Reset all filter buttons to black background
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-yellow-300', 'text-black');
+          b.classList.add('bg-black', 'text-yellow-300');
+        });
+        
+        // Make clicked button yellow (active)
+        btn.classList.add('active', 'bg-yellow-300', 'text-black');
+        btn.classList.remove('bg-black', 'text-yellow-300');
         
         // Filter projects
         projectCards.forEach(card => {
@@ -529,20 +607,22 @@
       });
     });
     
-    // Form validation
+    // Form validation (if form exists)
     const form = document.querySelector('[data-form]');
     const formInputs = document.querySelectorAll('[data-form-input]');
     const formBtn = document.querySelector('[data-form-btn]');
     
-    formInputs.forEach(input => {
-      input.addEventListener('input', () => {
-        if (form.checkValidity()) {
-          formBtn.removeAttribute('disabled');
-        } else {
-          formBtn.setAttribute('disabled', '');
-        }
+    if (form && formInputs.length > 0 && formBtn) {
+      formInputs.forEach(input => {
+        input.addEventListener('input', () => {
+          if (form.checkValidity()) {
+            formBtn.removeAttribute('disabled');
+          } else {
+            formBtn.setAttribute('disabled', '');
+          }
+        });
       });
-    });
+    }
   </script>
 
 </body>
