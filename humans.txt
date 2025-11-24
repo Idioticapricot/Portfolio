@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Developer: Atthavelli Karthikeya (Idioticapricot)
+    Contact: akarthikeyasmail@gmail.com
+    GitHub: github.com/Idioticapricot
+    LinkedIn: linkedin.com/in/karthikeya-atthavelli-3a2291213
+    Location: Hyderabad, India
+
+# TECHNOLOGY COLOPHON
+    HTML5, CSS3, JavaScript
+    Tailwind CSS
+    Font Awesome Icons
+    Vercel Hosting
