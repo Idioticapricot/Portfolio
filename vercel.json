@@ -1,8 +1,15 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "has": [
+        {
+          "type": "host",
+          "value": "(?!www\\.idioticapricot\\.me).*"
+        }
+      ],
+      "destination": "https://www.idioticapricot.me/$1",
+      "permanent": true
     }
   ]
 }
